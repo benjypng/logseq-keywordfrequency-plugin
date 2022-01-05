@@ -8,15 +8,15 @@ const main = async () => {
   .kwWrapper {
     display: flex;
     flex-wrap: wrap;
-    border-radius: 5px;
+    gap: 5px;
+    margin-bottom: 8px;
   }
   
   .kwEl {
     border: 1px dashed gray;
-    padding: 5px;
-    gap: 10px;
+    padding: 8px;
+    border-radius: 10px;
   }
-  
   `);
 
   // Generate unique identifier
@@ -32,15 +32,6 @@ const main = async () => {
     );
   });
 
-  const countFrequency = (str) => {
-    const words = str.split(/\b/);
-
-    for (let i = 0; i < words.length; i++)
-      wordCounts['_' + words[i]] = (wordCounts['_' + words[i]] || 0) + 1;
-
-    return wordCounts;
-  };
-
   const filterNounArr = (str) => {
     // Empty object to store the final count
     let wordCounts = {};
@@ -51,7 +42,17 @@ const main = async () => {
 
     let nounArr = [];
     for (let a of taggedWords) {
-      if (a[1] === 'NN' && a[0] !== '][') {
+      if (
+        a[1] === 'NN' &&
+        a[0] !== '][' &&
+        a[0] !== '-' &&
+        a[0] !== '–' &&
+        a[0] !== '—' &&
+        a[0] !== '−' &&
+        a[0] !== "'" &&
+        a[0] !== '`' &&
+        a[0] !== '´'
+      ) {
         nounArr.push(a[0]);
       }
     }
