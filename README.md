@@ -4,6 +4,10 @@ This plugin keeps track of your 30 most used keywords, just for fun! They may ev
 
 ![](/screenshots/demo.gif)
 
+# Installation
+
+Manual installation currently. Download the latest release, unzip and manually load into Logseq.
+
 # Credits
 
 [jspos](https://code.google.com/archive/p/jspos/source)
