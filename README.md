@@ -1,6 +1,6 @@
 # Overview
 
-This plugin keeps track of your most used keywords, just for fun! They may eventually be used to search for related pages you have in your graph. Who knows!
+This plugin keeps track of your 30 most used keywords, just for fun! They may eventually be used to search for related pages you have in your graph. Who knows!
 
 # Credits
 
