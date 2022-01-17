@@ -126,7 +126,7 @@ const main = async () => {
           key: `${kwFxId}`,
           slot,
           reset: true,
-          template: `<div id="${kwFxId}" data-key-id="${kwFxId}" class="kwWrapper">${renderKw()}</div>`,
+          template: `<div id="${kwFxId}" data-key-id="${kwFxId}" data-slot-id="${slot}" class="kwWrapper">${renderKw()}</div>`,
         });
       }
     };
